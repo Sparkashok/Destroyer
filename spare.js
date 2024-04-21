@@ -44,7 +44,7 @@ const loadWomensImages = () => {
     
     let see = document.querySelector(".seeMore");
     see.addEventListener("click", () => {
-        see.setAttribute("href", "http://127.0.0.1:5501/Destroyer/womens.html");
+        see.setAttribute("href", "https://sparkashok.github.io/Destroyer/womens.html");
     });
 }
 
@@ -69,7 +69,7 @@ const loadMensImages = () => { // Renamed function to avoid clash and corrected 
     let see = document.querySelector(".seeMore");
     console.log("mensimages");
     see.addEventListener("click", () => {
-        window.location.href = "http://127.0.0.1:5501/Destroyer/mens.html";
+        window.location.href = "https://sparkashok.github.io/Destroyer/mens.html";
     })
     console.log("mensimages");
 }
@@ -91,7 +91,7 @@ const loadKidsImages = () => { // Renamed function to avoid clash and corrected 
     let see = document.querySelector(".seeMore");
 
     see.addEventListener("click", () => {
-        see.setAttribute("href", "http://127.0.0.1:5501/Destroyer/kids.html");
+        see.setAttribute("href", "https://sparkashok.github.io/Destroyer/kids.html");
     })
 }
 
@@ -112,7 +112,7 @@ const loadsportImages = () => { // Renamed function to avoid clash and corrected
     let see = document.querySelector(".seeMore");
 
     see.addEventListener("click", () => {
-        see.setAttribute("href", "http://127.0.0.1:5501/Destroyer/sport.html");
+        see.setAttribute("href", "https://sparkashok.github.io/Destroyer/sport.html");
     })
 }
 function timeoffer() {
