@@ -1,0 +1,534 @@
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #a6b1b4;
+  height: 2000px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #050404;
+  color: #fff;
+  padding: 10px;
+}
+
+.left-section h1 {
+  margin: 0;
+  font-size: 35px;
+  color: rgb(184, 52, 52);
+}
+
+.left-section p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.center-section {
+  text-align: center;
+  color: rgb(71, 71, 176);
+}
+
+.right-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right-section ul li {
+  display: inline-block;
+  margin-left: 20px;
+  color: inherit; /* Remove color */
+}
+.right-section ul li a{
+  text-decoration: none;
+  color: rgb(186, 183, 183);
+  font-family: cursive;
+}
+
+.right-section .search-bar {
+  margin-left: 20px;
+}
+
+.right-section input[type="text"] {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: black;
+  margin-top: 15px;
+  border: 3px solid green;
+}
+
+.right-section button {
+  padding: 5px 10px;
+  background-color: #101010;
+  color: #a3a0a0;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+@keyframes firstanime{
+  from{
+      transform: translateX(1000px);
+  }
+  to{
+      transform: translateX(0);
+  }
+}
+.anime{
+  background-color: rgb(114, 197, 211);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  margin-top: 10px;
+}
+.animation{
+  font-size: small;
+  font-family: cursive;
+  color: rgb(19, 18, 18);
+  animation-name: firstanime;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 100;
+}
+*{
+  box-sizing: border-box;
+  font-family: 'lato' , sans-serif;
+}
+
+.wrapper {
+  margin-top: 20px;
+  display: flex; /* Display items in a row */
+  justify-content: space-between; /* Space items evenly */
+  flex-wrap: wrap; /* Allow items to wrap to next row if needed */
+}
+
+.shirt-item {
+  width: 48%; /* Each item takes 48% of the wrapper width */
+  margin-bottom: 20px; /* Add margin bottom for spacing */
+  position: relative; /* Relative positioning for info overlay */
+  overflow: hidden; /* Hide overflow of info */
+}
+
+.shirt-item img {
+  width: 100%; /* Image takes full width of shirt-item */
+  transition: transform 0.3s ease-in-out; /* Transition effect */
+}
+
+.shirt-item:hover img {
+  transform: scale(1.1); /* Scale image on hover */
+}
+
+.info {
+  text-align: center;
+  color: black;
+  position: absolute; /* Absolute positioning for info */
+  bottom: 0; /* Align info to bottom of shirt-item */
+  left: 0; /* Align info to left of shirt-item */
+  width: 100%; /* Info takes full width of shirt-item */
+  background-color: rgb(148, 144, 148); /* Semi-transparent background */
+  padding: 10px; /* Padding for content */
+  box-sizing: border-box; /* Include padding in width */
+  transform: translateY(100%); /* Initially hide info below shirt-item */
+  transition: transform 0.9s ease-in-out; 
+}
+
+.shirt-item:hover .info {
+  transform: translateY(0); /* Show info on hover */
+}
+
+.info h1,
+.info p {
+  margin: 5px 0; /* Add margin for content */
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .wrapper,.wrapper2,.wrapper3 {
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+  }
+
+  .shirt-item {
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+  }
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-section {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .right-section ul {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .right-section ul li {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+.categories {
+  text-align: center; /* Align text center */
+}
+
+.categories button {
+  margin: 0 5px; /* Add margin to space buttons */
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Specific styles for each button */
+button:nth-of-type(1) {
+  background-color: rgb(158, 34, 61); /* Green */
+}
+
+button:nth-of-type(2) {
+  background-color: #008CBA; /* Blue */
+}
+
+button:nth-of-type(3) {
+  background-color: #f44336; /* Red */
+}
+button:nth-of-type(4) {
+  background-color: #4636f4; /* Red */
+}
+button:nth-of-type(5) {
+  background-color: #de36f4; /* Red */
+}
+
+/* CSS for Image Slider */
+.imageslider {
+  position: relative;
+  max-width: 100%;
+}
+
+.imageslider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Button Styles */
+.preImage,.preImage1,
+.froImage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 12px;
+  z-index: 100;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.preImage:hover,.preImage1:hover,
+.froImage:hover {
+  opacity: 1;
+}
+
+.preImage,.preImage1 {
+  left: -50px;
+}
+
+.froImage {
+  right: -50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .imageslider img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+.womens-list,.forSliding {
+  display: flex; /* Display images in a row */
+  justify-content: center; /* Center the images horizontally */
+  flex-wrap: wrap; /* Allow images to wrap to the next row */
+  /* max-width: 1900px; */
+}
+
+.p-category1,.p-category2,.p-category3,.p-category4,.p-category5,.p-category6,.p-category7,.p-category8 {
+  width: 290px; /* Set a fixed width for all images */
+  height: 280px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden; 
+  position: relative; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.womens-list.p-category1,.womens-list.p-category2,.womens-list.p-category3,.womens-list.p-category4,.womens-list.p-category5,.womens-list.p-category6,.womens-list.p-category7,.womens-list.p-category8 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-category1:hover,.p-category2:hover,.p-category3:hover,.p-category4:hover,.p-category5:hover,.p-category6:hover,.p-category7:hover,.p-category8:hover   {
+  transform: scale(1.1); /* Scale image on hover */
+}
+
+.p-category5,.p-category6,.p-category7,.p-category8{
+  display: none;
+}
+
+
+.womensitems,.mens-items,.kids-items,.sport-items{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  /* max-width: 900px; */
+}
+
+.mens-items img{
+  width: 280px; /* Set a fixed width for all images */
+  height: 280px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  margin: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.womensitems img{
+  width: 280px; /* Set a fixed width for all images */
+  height: 280px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  margin: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.sport-items img{
+  width: 280px; /* Set a fixed width for all images */
+  height: 280px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  margin: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.kids-items img{
+  width: 280px; /* Set a fixed width for all images */
+  height: 280px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  margin: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover{
+  transform: scale(1.1);
+}
+
+/* Add this to your styles.css file */
+
+.see-more {
+  text-align: center; /* Center-align the button */
+  margin-top: 30px; /* Add some space between the women's list and the button */
+  margin-bottom: 20px;
+}
+
+.see-more .button {
+  background-color: rgb(36, 35, 35); /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 15px; /* Button padding */
+  border: none; /* Remove button border */
+  border-radius: 10px; /* Button border radius */
+  cursor: pointer; /* Cursor style on hover */
+}
+
+
+.offer-time {
+  font-size: 18px; /* Increase font size for visibility */
+  color: #e31111; /* Dark gray color */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+
+
+/* Adjustments for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .offer-time {
+      font-size: 20px; /* Decrease font size for smaller screens */
+  }
+
+  .animation {
+      font-size: 16px; /* Decrease font size for smaller screens */
+  }
+}
+
+
+#top-collections{
+  text-align: center;
+  color: #93469d;
+  font-family: cursive;
+}
+
+/* CSS for accessories */
+.accessories {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.accessories h3 {
+  color: #93469d;
+  font-family: cursive;
+}
+
+.accessories .p-category {
+  width: 290px;
+  height: 280px;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.accessories .p-category:hover {
+  transform: scale(1.1);
+}
+
+/* CSS for other categories */
+.other-categories {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.other-categories h3 {
+  color: #93469d;
+  font-family: cursive;
+}
+
+.other-categories .p-category {
+  width: 290px;
+  height: 280px;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.other-categories .p-category:hover {
+  transform: scale(1.1);
+}
+
+/* Footer styles */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left-footer,
+.middle-footer,
+.right-footer {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.left-footer h2,
+.middle-footer h2,
+.right-footer h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #ffcc00;
+}
+
+.left-footer p {
+  margin: 0;
+  font-size: 1rem;
+  font-family: cursive;
+  color: #ccc;
+}
+
+.middle-footer ul,
+.right-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.middle-footer ul li,
+.right-footer ul li {
+  margin-bottom: 10px;
+}
+
+.middle-footer ul li a,
+.right-footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.middle-footer ul li a:hover,
+.right-footer ul li a:hover {
+  color: #ffcc00;
+}
+
+.bottom-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.bottom-footer p {
+  margin: 0;
+}
+
+
+
+
